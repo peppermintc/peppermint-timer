@@ -1,0 +1,12 @@
+.title {
+  color: white;
+  font-size: 6rem;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px rgb(151, 161, 156);
+
+  height: 27vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
