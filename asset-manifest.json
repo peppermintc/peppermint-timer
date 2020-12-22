@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/peppermintc/peppermint-timer/static/css/main.f1752c46.chunk.css",
+    "main.js": "/peppermintc/peppermint-timer/static/js/main.7fd50ea1.chunk.js",
+    "main.js.map": "/peppermintc/peppermint-timer/static/js/main.7fd50ea1.chunk.js.map",
+    "runtime-main.js": "/peppermintc/peppermint-timer/static/js/runtime-main.bba37f2c.js",
+    "runtime-main.js.map": "/peppermintc/peppermint-timer/static/js/runtime-main.bba37f2c.js.map",
+    "static/css/2.95f25948.chunk.css": "/peppermintc/peppermint-timer/static/css/2.95f25948.chunk.css",
+    "static/js/2.44859ae0.chunk.js": "/peppermintc/peppermint-timer/static/js/2.44859ae0.chunk.js",
+    "static/js/2.44859ae0.chunk.js.map": "/peppermintc/peppermint-timer/static/js/2.44859ae0.chunk.js.map",
+    "index.html": "/peppermintc/peppermint-timer/index.html",
+    "static/css/2.95f25948.chunk.css.map": "/peppermintc/peppermint-timer/static/css/2.95f25948.chunk.css.map",
+    "static/css/main.f1752c46.chunk.css.map": "/peppermintc/peppermint-timer/static/css/main.f1752c46.chunk.css.map",
+    "static/js/2.44859ae0.chunk.js.LICENSE.txt": "/peppermintc/peppermint-timer/static/js/2.44859ae0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bba37f2c.js",
+    "static/css/2.95f25948.chunk.css",
+    "static/js/2.44859ae0.chunk.js",
+    "static/css/main.f1752c46.chunk.css",
+    "static/js/main.7fd50ea1.chunk.js"
+  ]
+}
