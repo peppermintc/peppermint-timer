@@ -3,7 +3,7 @@ import styles from "./clock.module.css";
 
 const Clock = ({ minute }) => {
   const [minutes, setMinutes] = useState(minute);
-  const [seconds, setSeconds] = useState("00");
+  const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
     const countdown = setInterval(() => {
@@ -26,7 +26,7 @@ const Clock = ({ minute }) => {
 
   return (
     <div className={styles.time}>
-      {minutes}:{seconds}
+      {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
     </div>
   );
 };
