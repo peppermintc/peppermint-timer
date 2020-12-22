@@ -1,0 +1,18 @@
+.container {
+  padding: 2em;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgb(151, 161, 156);
+  border-radius: 10px;
+
+  animation: effect 0.15s ease-in;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes effect {
+  0% {
+    transform: scale(1.02);
+  }
+}
