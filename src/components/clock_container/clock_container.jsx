@@ -14,6 +14,10 @@ const ClockContainer = ({ minute }) => {
 
   useEffect(() => {
     setNow(parseInt(100 - (leftTime / totalTime) * 100));
+    if (parseInt(100 - (leftTime / totalTime) * 100) === 100) {
+      const message = document.querySelector(".message");
+      message.innerHTML = "Complete!";
+    }
   }, [leftTime]);
 
   return (
@@ -31,6 +35,7 @@ const ClockContainer = ({ minute }) => {
         now={now}
         label={`${now}%`}
       />
+      <span className="message">&nbsp;</span>
     </div>
   );
 };
