@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./clock.module.css";
+import alarm from "../../sounds/alarm.mp3";
 
 const Clock = ({ minute, leftTimeChange }) => {
   const [minutes, setMinutes] = useState(minute);
@@ -19,7 +20,7 @@ const Clock = ({ minute, leftTimeChange }) => {
           console.log("finish");
           // Alarm
           var audio = new Audio();
-          audio.src = "/sounds/alarm.mp3";
+          audio.src = { alarm };
           audio.play();
         } else {
           setMinutes(parseInt(minutes) - 1);
