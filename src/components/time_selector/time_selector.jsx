@@ -7,7 +7,9 @@ const TimeSelector = ({ setTimer }) => {
   const [minute, setMinute] = useState(0);
 
   const onButtonClick = () => {
-    setTimer(minute);
+    if (Math.sign(minute) === 1) {
+      setTimer(minute);
+    }
   };
 
   const minuteChange = (minute) => {
