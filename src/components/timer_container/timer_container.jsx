@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Clock from "../clock/clock";
+import StartButton from "../start_button/start_button";
+import styles from "./timer_container.module.css";
 
 const TimerContainer = (props) => {
   const [startClicked, setStartClicked] = useState(false);
@@ -14,10 +16,10 @@ const TimerContainer = (props) => {
   };
 
   return (
-    <div className="timer_container">
+    <div className={styles.timer_container}>
       {startClicked && <Clock />}
       {startClicked && <div>Progressive Bar</div>}
-      {!startClicked && <button onClick={() => toggleStart()}>Start</button>}
+      {!startClicked && <StartButton toggleStart={toggleStart} />}
       {startClicked && (
         <button onClick={() => toggleStart()}>Return to home</button>
       )}
