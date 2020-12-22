@@ -20,7 +20,7 @@ const Clock = ({ minute, leftTimeChange }) => {
           console.log("finish");
           // Alarm
           var audio = new Audio();
-          audio.src = { alarm };
+          audio.src = alarm;
           audio.play();
         } else {
           setMinutes(parseInt(minutes) - 1);
