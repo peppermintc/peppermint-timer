@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styles from "./clock.module.css";
 
-const Clock = ({ minute }) => {
+const Clock = ({ minute, leftTimeChange }) => {
   const [minutes, setMinutes] = useState(minute);
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
     const countdown = setInterval(() => {
+      leftTimeChange(seconds + minutes * 60);
+
       if (parseInt(seconds) > 0) {
         setSeconds(parseInt(seconds) - 1);
       }
