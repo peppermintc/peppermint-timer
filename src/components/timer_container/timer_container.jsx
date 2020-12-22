@@ -6,6 +6,7 @@ import TimeSelector from "../time_selector/time_selector";
 
 const TimerContainer = (props) => {
   const [startClicked, setStartClicked] = useState(false);
+  const [minute, setMinute] = useState(0);
 
   const toggleStart = () => {
     if (startClicked === true) {
@@ -13,7 +14,11 @@ const TimerContainer = (props) => {
     } else {
       setStartClicked(true);
     }
-    console.log(startClicked);
+  };
+
+  const setTimer = async (minute) => {
+    await setMinute(minute);
+    console.log(minute);
   };
 
   return (
@@ -21,7 +26,7 @@ const TimerContainer = (props) => {
       {!startClicked ? (
         <StartButton toggleStart={toggleStart} />
       ) : (
-        <TimeSelector />
+        <TimeSelector setTimer={setTimer} />
       )}
 
       {/* {startClicked && <Clock />}

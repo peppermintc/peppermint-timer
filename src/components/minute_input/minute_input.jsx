@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import styles from "./minute_input.module.css";
 
-export default function MinuteInput() {
-  const [value, setValue] = useState("");
+export default function MinuteInput({ minuteChange }) {
+  const [value, setValue] = useState(0);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = async (event) => {
+    await setValue(event.target.value);
   };
+
+  useEffect(() => {
+    minuteChange(value);
+  }, [value]);
 
   return (
     <div className={styles.container}>
       <TextField
-        onChange={handleChange}
+        onChange={(event) => handleChange(event)}
         id="standard-textarea"
         placeholder="Minutes"
         multiline
@@ -24,7 +28,7 @@ export default function MinuteInput() {
             padding: "16px 14px",
             boxSizing: "border-box",
           },
-        }} // font size of input text
+        }}
         margin="normal"
       />
     </div>
