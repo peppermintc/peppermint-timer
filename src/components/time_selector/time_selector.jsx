@@ -20,7 +20,10 @@ const TimeSelector = ({ setTimer }) => {
     <div className={styles.container}>
       <h2>How many minutes are you going to focus?</h2>
       <div className={styles.input_container}>
-        <MinuteInput minuteChange={minuteChange} />
+        <MinuteInput
+          minuteChange={minuteChange}
+          onButtonClick={onButtonClick}
+        />
         <div className={styles.startTimerButton}>
           <Button onClick={onButtonClick} variant="outline-success">
             Start Timer

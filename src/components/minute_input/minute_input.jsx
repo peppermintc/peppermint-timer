@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import styles from "./minute_input.module.css";
 
-export default function MinuteInput({ minuteChange }) {
+export default function MinuteInput({ minuteChange, onButtonClick }) {
   const [value, setValue] = useState(0);
 
   const handleChange = async (event) => {
@@ -30,6 +30,11 @@ export default function MinuteInput({ minuteChange }) {
           },
         }}
         margin="normal"
+        onKeyPress={(event) => {
+          if (event.key === "Enter") {
+            onButtonClick();
+          }
+        }}
       />
     </div>
   );
