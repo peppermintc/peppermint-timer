@@ -17,6 +17,10 @@ const Clock = ({ minute, leftTimeChange }) => {
           // Timer Finish
           clearInterval(countdown);
           console.log("finish");
+          // Alarm
+          var audio = new Audio();
+          audio.src = "/sounds/alarm.mp3";
+          audio.play();
         } else {
           setMinutes(parseInt(minutes) - 1);
           setSeconds(59);
