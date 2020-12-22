@@ -1,9 +1,14 @@
-import React from 'react';
-import './app.css';
+import React from "react";
+import "./app.css";
+import Header from "./components/header/header";
+import TimerContainer from "./components/TimerContainer/timer_container";
 
 function App() {
   return (
-    <h1>hi</h1>
+    <div className="App">
+      <Header />
+      <TimerContainer />
+    </div>
   );
 }
 
