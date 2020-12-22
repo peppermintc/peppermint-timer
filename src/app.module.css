@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(163, 204, 162);
+  height: 100vh;
+}
+
+.footer {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 28vh;
+  padding-bottom: 2.5em;
+}
+
+.footer_text {
+  margin-top: 0.8em;
+}
