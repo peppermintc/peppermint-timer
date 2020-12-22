@@ -8,7 +8,6 @@ const TimerContainer = (props) => {
   const [startClicked, setStartClicked] = useState(false);
   const [minute, setMinute] = useState(0);
   const [timeSet, setTimeSet] = useState(false);
-  const [second, setSecond] = useState(0);
 
   const toggleStart = () => {
     if (startClicked === true) {
@@ -18,8 +17,8 @@ const TimerContainer = (props) => {
     }
   };
 
-  const setTimer = async (minute) => {
-    await setMinute(minute);
+  const setTimer = (minute) => {
+    setMinute(minute);
     setTimeSet(true);
   };
 
@@ -27,7 +26,7 @@ const TimerContainer = (props) => {
     <div className={styles.timer_container}>
       {!startClicked && <StartButton toggleStart={toggleStart} />}
       {startClicked && !timeSet ? <TimeSelector setTimer={setTimer} /> : null}
-      {timeSet && <ClockContainer minute={minute} second={second} />}
+      {timeSet && <ClockContainer minute={minute} />}
     </div>
   );
 };
